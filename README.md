@@ -785,3 +785,9 @@ select min(F.cnt) from ( select maker, count(maker) as cnt from product group by
 Используя таблицу Product, определить количество производителей, выпускающих по одной модели.
 
 select count(*)  from ( select maker from product group by maker having count(model)=1 ) as Q
+
+Задание: 92
+
+Найдите страны, корабли которых имеют наибольшее число орудий.
+
+select distinct country from classes where numGuns=(select max(numguns) from classes)
