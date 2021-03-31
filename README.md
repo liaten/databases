@@ -136,11 +136,11 @@ Select hd  from pc group by hd having count(model)>1
 
 Найдите пары моделей PC, имеющих одинаковые скорость и RAM. В результате каждая пара указывается только один раз, т.е. (i,j), но не (j,i), Порядок вывода: модель с большим номером, модель с меньшим номером, скорость и RAM.
 
-SELECT DISTINCT B.model AS model, A.model AS model, A.speed, A.ram 
+SELECT DISTINCT B.model AS pc1.model, A.model AS pc2.model, A.speed, A.ram
 
-FROM PC AS A, PC B 
+FROM PC AS A, PC B
 
-WHERE A.speed = B.speed AND A.ram = B.ram and A.model < B.model 
+WHERE A.speed = B.speed AND A.ram = B.ram and A.model < B.model
 
 Задание: 17 
 
