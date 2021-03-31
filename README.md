@@ -791,3 +791,9 @@ select count(*)  from ( select maker from product group by maker having count(mo
 Найдите страны, корабли которых имеют наибольшее число орудий.
 
 select distinct country from classes where numGuns=(select max(numguns) from classes)
+
+Задание: 93
+
+Найти имя матери
+
+select persname from family where fstatus = 'мать'
