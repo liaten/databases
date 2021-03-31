@@ -818,9 +818,25 @@ select count(*) from classes where classes.type='bb'
 Найдите производителя, продающего ПК, но не ПК-блокноты. 
 
 SELECT DISTINCT p.maker 
+
 FROM Product p INNER JOIN 
+
  PC ON p.model = PC.model
+ 
 WHERE p.maker NOT IN (SELECT ip.maker 
+
  FROM Laptop il INNER JOIN 
+ 
  Product ip ON il.model = ip.model
+ 
  );
+ 
+Задание: 97
+
+Выбрать название товаров и даты покупок за март 2006
+
+select goods.gname,payments.pdate from goods
+
+inner join payments on payments.good=goods.ID_G
+
+where ((pdate>=#2005-03-01#)and(pdate<=#2005-03-30#))
