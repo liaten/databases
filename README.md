@@ -812,3 +812,15 @@ where fstatus ='сын'
 Определите число классов линейных кораблей.
 
 select count(*) from classes where classes.type='bb'
+
+Задание: 96
+
+Найдите производителя, продающего ПК, но не ПК-блокноты. 
+
+SELECT DISTINCT p.maker 
+FROM Product p INNER JOIN 
+ PC ON p.model = PC.model
+WHERE p.maker NOT IN (SELECT ip.maker 
+ FROM Laptop il INNER JOIN 
+ Product ip ON il.model = ip.model
+ );
