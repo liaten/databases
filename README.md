@@ -797,3 +797,9 @@ select distinct country from classes where numGuns=(select max(numguns) from cla
 Найти имя матери
 
 select persname from family where fstatus = 'мать'
+
+Задание: 94
+Узнать имя старшего из детей
+
+select persname from family
+where fstatus ='сын'
