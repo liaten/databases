@@ -1,6 +1,9 @@
 # databases
+
 взято из: https://sites.google.com/site/addsharming/otvety-na-zadaci-po-sql
+
 Задачи по базам данных. Решение задач по SQL [1]
+
 Задание: 1
 
 Найдите номер модели, скорость и размер жесткого диска для всех ПК стоимостью менее 500 дол. Вывести: model, speed и hd 
