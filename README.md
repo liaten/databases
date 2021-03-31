@@ -807,3 +807,8 @@ select persname from family where fstatus = 'мать'
 
 select persname from family
 where fstatus ='сын'
+
+Задание: 95
+Определите число классов линейных кораблей.
+
+select count(*) from classes where classes.type='bb'
