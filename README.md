@@ -556,11 +556,9 @@ select ship from outcomes where ship in( Select class from classes where bore=16
 
 Найдите сражения, в которых участвовали корабли класса Kongo из таблицы Ships.
 
-SELECT distinct battle FROM Classes  inner JOIN Ships  ON ships.class = classes.class   
+SELECT distinct battle FROM outcomes inner JOIN Ships ON ships.name = outcomes.ship
 
-inner JOIN Outcomes  ON Classes.class=Outcomes.ship or Ships.name=Outcomes.ship   
-
-WHERE classes.class = 'Kongo'  
+WHERE ships.class = 'Kongo'
 
 Задание: 51
 
