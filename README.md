@@ -612,7 +612,7 @@ WHERE type = 'bb'
 
 Для каждого класса определите год, когда был спущен на воду первый корабль этого класса. Если год спуска на воду головного корабля неизвестен, определите минимальный год спуска на воду кораблей этого класса. Вывести: класс, год.
 
-select C.class, min(launched)  from ships as S right join classes as C on s.class=c.class group by C.class 
+select C.class, min(launched) from ships as S right join classes as C on s.class=c.class where s.launched is not null group by C.class 
 
 Задание: 56
 
