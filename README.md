@@ -1,6 +1,8 @@
 # databases
 
-взято из: https://sites.google.com/site/addsharming/otvety-na-zadaci-po-sql
+Взято из: https://sites.google.com/site/addsharming/otvety-na-zadaci-po-sql
+
++ дополнено своими ответами
 
 Задачи по базам данных. Решение задач по SQL [1]
 
