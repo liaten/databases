@@ -1,0 +1,4 @@
+1 https://www.w3schools.com/css/css_form.asp - формы ввода на css
+2 https://www.php.net/manual/ru/language.variables.external.php
+3 https://www.php.net/manual/ru/tutorial.forms.php
+2 и 3 - работа с переменными в php через html
