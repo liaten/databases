@@ -842,8 +842,13 @@ inner join payments on payments.good=goods.ID_G
 where ((pdate>=#2005-03-01#)and(pdate<=#2005-03-30#))
 
 Задание: 98
+
 Найти траты членов семьи за 2005 год
+
 select Family.FStatus, SUM(Price * HowMany) as S
+
 from payments, family
+
 where (year(payments.pdate) = 2005) and (payments.who = family.id_s)
+
 group by Family.FStatus
