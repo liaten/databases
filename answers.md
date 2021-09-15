@@ -7,111 +7,124 @@
 ## Задание: 1
 
 ### Найдите номер модели, скорость и размер жесткого диска для всех ПК стоимостью менее 500 дол. Вывести: model, speed и hd 
-
+```
 SELECT model ,  speed, hd
-
 FROM pc
-
 WHERE price < 500  
-
+```
 ## Задание: 2
-
 ### Найдите производителей принтеров. Вывести: maker
-
+```
 SELECT maker from  product
-
 WHERE product.type = 'printer'
-
 GROUP BY maker  
-
+```
 ## Задание: 3
-
 ### Найдите номер модели, объем памяти и размеры экранов ПК-блокнотов, цена которых превышает 1000 дол.
-
-select model , ram ,  screen from laptop where price > 1000  
-
+```
+SELECT model , ram ,  screen
+FROM laptop
+WHERE price > 1000  
+```
 ## Задание: 4
-
 ### Найдите все записи таблицы Printer для цветных принтеров.
-
-select * from printer where color = 'y'  
-
+```
+SELECT *
+FROM printer
+WHERE color = 'y'
+```
 ## Задание: 5
-
 ### Найдите номер модели, скорость и размер жесткого диска ПК, имеющих 12x или 24x CD и цену менее 600 дол.
-
-Select model ,speed , hd  from pc where (cd = '12x' or cd = '24x') and price < 600  
-
+```
+SELECT model ,speed , hd
+FROM pc
+WHERE (cd = '12x' or cd = '24x')
+and price < 600  
+```
 ## Задание: 6
-
 ### Укажите производителя и скорость для тех ПК-блокнотов, которые имеют жесткий диск объемом не менее 10 Гбайт.
-
-Select maker, speed  from Product inner join Laptop on Product.model = Laptop.model   
-
-where hd >= 10  
-
+```
+SELECT maker, speed
+FROM Product
+INNER JOIN Laptop
+ON Product.model = Laptop.model   
+WHERE hd >= 10  
+```
 ## Задание: 7
-
 ### Найдите номера моделей и цены всех продуктов (любого типа), выпущенных производителем B (латинская буква).
-
-Select laptop.model , laptop.price  from laptop inner join product on laptop.model = product.model  
-
-where product.maker= 'B' 
-
-union 
-
-Select pc.model , pc.price from pc inner join product on pc.model = product.model  
-
-where product.maker= 'B' 
-
-union 
-
-Select printer.model , printer.price from printer inner join product on printer.model = product.model  
-
-where product.maker= 'B' 
-
+```
+SELECT laptop.model , laptop.price
+FROM laptop
+INNER JOIN product
+ON laptop.model = product.model  
+WHERE product.maker= 'B' 
+UNION
+SELECT pc.model , pc.price
+FROM pc
+INNER JOIN product
+ON pc.model = product.model  
+WHERE product.maker= 'B' 
+UNION
+SELECT printer.model , printer.price
+FROM printer
+INNER JOIN product
+ON printer.model = product.model  
+WHERE product.maker= 'B' 
+```
 ## Задание: 8 
 
 ### Найдите производителя, выпускающего ПК, но не ПК-блокноты.
-
-select maker from product where type='PC' and maker not in   
-
-( select maker from product where type = 'Laptop') group by maker   
-
+```
+SELECT maker
+FROM product
+WHERE type='PC'
+and maker
+NOT IN
+( SELECT maker FROM product WHERE type = 'Laptop')
+GROUP BY maker
+```
 ## Задание: 9 
 
 ### Найдите производителей ПК с процессором не менее 450 Мгц. Вывести: Maker
-
-Select maker  from pc inner join product on pc.model = product.model where speed >= 450 
-
+```
+Select maker
+from pc
+inner join product
+on pc.model = product.model
+where speed >= 450 
 group by maker 
-
+```
 ## Задание: 10 
-
 ### Найдите принтеры, имеющие самую высокую цену. Вывести: model, price
-
-select model, price  from printer where price = (select max(price) from printer)   
-
+```
+select model, price
+from printer
+where price = (select max(price) from printer)   
+```
 ## Задание: 11 
-
 ### Найдите среднюю скорость ПК.
-
-select avg (speed) from pc  
-
+```
+select avg (speed)
+from pc  
+```
 ## Задание: 12 
-
 ### Найдите среднюю скорость ПК-блокнотов, цена которых превышает 1000 дол.
-
-Select avg(speed) from laptop where price > 1000 
-
+```
+Select avg(speed)
+From laptop 
+Where price > 1000 
+```
 ## Задание: 13 
 
 ### Найдите среднюю скорость ПК, выпущенных производителем A
-
-Select avg(speed) from pc inner join product on pc.model= product.model where maker = 'A'   
-
+```
+Select avg(speed)
+from pc
+inner join product
+on pc.model= product.model
+where maker = 'A'   
 group by maker 
-
+```
 ## Задание: 14 
 
 ### Для каждого значения скорости найдите среднюю стоимость ПК с такой же скоростью процессора. Вывести: скорость, средняя цена
