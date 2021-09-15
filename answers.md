@@ -852,3 +852,7 @@ from payments, family
 where (year(payments.pdate) = 2005) and (payments.who = family.id_s)
 
 group by Family.FStatus
+
+Задание: 99
+
+Показать максимальный, минимальный и средний возраст студентов специальности «Прикладная информатика»
