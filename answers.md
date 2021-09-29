@@ -860,4 +860,5 @@ from predmets, marks
 where id_p = predm
 and markform in('экзамен','зачет')
 and gos in('гсэ.ф')
+and year(mdate) = 2007
 ```
