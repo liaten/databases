@@ -854,3 +854,10 @@ group by F
 
 ## Задание 84
 ### По каким предметам группы ГСЭ был контроль (экзамен или зачет) в 2007 году?
+```
+select distinct pname
+from predmets, marks
+where id_p = predm
+and markform in('экзамен','зачет')
+and gos in('гсэ.ф')
+```
