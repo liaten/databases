@@ -865,3 +865,12 @@ and year(mdate) = 2007
 
 ## Задание 85
 ### Показать историю учебы (событие, группа, дата) студента Новикова
+
+## Задание 86
+### Вывести фамилии авторов, которые заканчиваются на "-ий", "-ый"
+```
+select F from persons, autors
+where (F like "%ий") OR (F like "%ый") AND (autors.person = persons.idP)
+group by f, idp
+order by idp
+```
