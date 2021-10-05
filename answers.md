@@ -874,3 +874,6 @@ where (F like "%ий") OR (F like "%ый") AND (autors.person = persons.idP)
 group by f, idp
 order by idp
 ```
+
+## Задание 87
+###  Вывести авторов статьи «Оценивание инновационной привлекательности…» в порядке авторства
