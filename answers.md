@@ -900,3 +900,12 @@ from GoodTypes, Goods, Payments
 where ID_GT = GType and ID_G = Good and year(pdate)=2005
 group by GTName
 ```
+
+## Задание 91
+### Определить, сколько покупок совершалось членами семьи по каждому виду продукции (услуг)
+```
+select count(good),gname from goods, Payments
+where ID_G = Good
+group by gname
+order by count(good) desc
+```
