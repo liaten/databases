@@ -891,3 +891,12 @@ from preps
 select Discipline  from uchplan
 where srs=0
 ```
+
+## Задание 90
+### Узнать, сколько потрачено на каждую из групп товаров в 2005 году. Вывести название группы и сумму.
+```
+select GTName, sum(price*howmany)
+from GoodTypes, Goods, Payments
+where ID_GT = GType and ID_G = Good and year(pdate)=2005
+group by GTName
+```
