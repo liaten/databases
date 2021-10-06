@@ -909,3 +909,10 @@ where ID_G = Good
 group by gname
 order by count(good) desc
 ```
+
+## Задание 92
+### Показать фамилии и имена студентов, чьи имена начинаются на букву А
+```
+Select SFName, SName from Studs
+where sname like "А%"
+```
