@@ -884,3 +884,10 @@ order by idp
 SELECT avg(DateDiff("yyyy", bDate , now))
 from preps
 ```
+
+## Задание 89
+### В каких дисциплинах не предусмотрены часы на самостоятельную работу?
+```
+select Discipline  from uchplan
+where srs=0
+```
