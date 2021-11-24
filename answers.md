@@ -942,3 +942,12 @@ or keyw like "%компетенции%"
 ```
 
 ```
+
+## Задание 97
+### Показать электронную почту и сайт издательства, которое опубликовало книгу об SQL Server 2005
+```
+select edname, edemail, edsite
+from books, editors 
+where bname like "%sql server 2005%" and
+editors.idED = books.editor
+```
