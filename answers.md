@@ -936,3 +936,9 @@ select bname from books
 where abstract like "%компетенции%"
 or keyw like "%компетенции%"
 ```
+
+## Задание 96
+### Вывести название самой длинной книги
+```
+
+```
